@@ -7,6 +7,14 @@
       "@src/*": [
         "src/*.tns.ts",
         "src/*.ts"
+      ],
+      "@ambient/test": [
+        "projects/ambient/test/src/lib",
+        "dist/ambient/test"
+      ],
+      "@ambient/test/*": [
+        "projects/ambient/test/src/lib/*",
+        "dist/ambient/test/*"
       ]
     }
   },

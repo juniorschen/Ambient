@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "@ambient/test": {
+      "projectType": "library",
+      "root": "projects/ambient/test",
+      "sourceRoot": "projects/ambient/test/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ambient/test/tsconfig.lib.json",
+            "project": "projects/ambient/test/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ambient/test/src/test.ts",
+            "tsConfig": "projects/ambient/test/tsconfig.spec.json",
+            "karmaConfig": "projects/ambient/test/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ambient/test/tsconfig.lib.json",
+              "projects/ambient/test/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "Ambient"
