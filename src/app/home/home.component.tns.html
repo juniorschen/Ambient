@@ -1,6 +1,10 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <ActionBar [title]="title"></ActionBar>
-<StackLayout  class="p-20">
-    <Label text="Welcome to {{ title }}!" class="h1 text-center" textWrap="true"></Label>
-</StackLayout> -->
-<lib-test></lib-test>
+<ActionBar title="Modal sample" class="action-bar">
+</ActionBar>
+
+<GridLayout>
+	<ScrollView class="page">
+		<StackLayout class="home-panel">
+			<Button text="Tap here to open modal1" (tap)="tapOpen()"></Button>
+		</StackLayout>
+	</ScrollView>
+</GridLayout>
